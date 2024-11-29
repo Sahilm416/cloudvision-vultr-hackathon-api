@@ -4,6 +4,7 @@
     "dev": "bun run --hot src/index.ts",
     "start": "bun run src/index.ts",
     "postinstall": "prisma generate",
+    "build" : "bun install"
   },
   "dependencies": {
     "@aws-sdk/client-ecs": "^3.683.0",
