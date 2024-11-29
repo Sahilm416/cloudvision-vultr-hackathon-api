@@ -23,7 +23,9 @@ router.post('/diagram', async (c:Context) => {
             const fileBuffer=Buffer.from(await img.arrayBuffer())
 
             //s3 push
-            const url=await handleUpload(fileBuffer,img.name,'sumit',img.type) as string
+            // const url=await handleUpload(fileBuffer,img.name,'sumit',img.type) as string
+
+            const url="https://utfs.io/f/SAmVPy7XPeIO07kFkbWtNnTzQpFC6v5Ve9cwGBmKbxtq2afd"
 
             //store to database
             const user=await getUser('sumit') as User
