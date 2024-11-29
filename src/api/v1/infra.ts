@@ -79,8 +79,8 @@ router.post('/create', async (c: Context) => {
 
 router.get('/all',async (c:Context) => {
     try {
-        const { resource } = c.req.query();
-        const getResource=await getInfra()
+        // const { resource } = c.req.query();
+        // const getResource=await getInfra()
 
         const res=getMockResponse()
 
@@ -96,6 +96,7 @@ router.get('/all',async (c:Context) => {
             }),400)
         }
 
+        console.log(error)
         return c.json(errorMsg({
             success:false,
             msg:"Internal Server error",
